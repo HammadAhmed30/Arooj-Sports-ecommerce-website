@@ -1,6 +1,9 @@
 import React from "react";
+import Catagories from "./Catagories";
 import Home from "./Home";
+import MartialArtcata from "./MartialArtcata";
 import Navbar from "./Navbar";
+import Sportscata from "./sportscata";
 
 export default function MainApp() {
   return (
@@ -9,7 +12,7 @@ export default function MainApp() {
         width: "100%",
         // height: "5000px",
         overflow: "hidden",
-        backgroundColor: "#070707",
+        backgroundColor: "black",
         position: "relative",
       }}
     >
@@ -46,10 +49,13 @@ export default function MainApp() {
           // }
         `}
       </style>
-      <div className="blur-ball-1"></div>
+      {/* <div className="blur-ball-1"></div> */}
 
       <Navbar />
       <Home />
+      <Catagories />
+      <Sportscata />
+      <MartialArtcata />
     </div>
   );
 }

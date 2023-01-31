@@ -4,191 +4,85 @@ import Menu from "./Menu";
 export default function Navbar() {
   let productList = [
     {
-      name: "Cricket",
+      name: "American Football",
       link: "/link",
     },
     {
-      name: "FootBall",
+      name: "Baseball jerseys",
       link: "/link",
     },
     {
-      name: "Gamer",
+      name: "Baseball uniform",
       link: "/link",
     },
     {
-      name: "Esports",
+      name: "Basketball",
       link: "/link",
     },
     {
-      name: "Mobile",
+      name: "GoalKeeper",
       link: "/link",
     },
     {
-      name: "Bat",
+      name: "Hoodies",
       link: "/link",
     },
     {
-      name: "Balls",
+      name: "Icehockey",
       link: "/link",
     },
     {
-      name: "Gamer",
+      name: "Netbal",
       link: "/link",
     },
     {
-      name: "Esports",
+      name: "Polo T shirts",
       link: "/link",
     },
     {
-      name: "Mobile",
+      name: "Rugby",
+      link: "/link",
+    },
+  ];
+  let productListForMartialArts = [
+    {
+      name: "Belts",
       link: "/link",
     },
     {
-      name: "Bat",
+      name: "Hapkido",
       link: "/link",
     },
     {
-      name: "Balls",
+      name: "Jiu Jitsu Gi Kimono",
       link: "/link",
     },
     {
-      name: "Gamer",
+      name: "Judo",
       link: "/link",
     },
     {
-      name: "Esports",
+      name: "Kendo uniform",
       link: "/link",
     },
     {
-      name: "Mobile",
+      name: "Kerate uniform",
       link: "/link",
     },
     {
-      name: "Bat",
+      name: "Kickboxing",
       link: "/link",
     },
     {
-      name: "Balls",
+      name: "Kung fu uniform",
       link: "/link",
     },
     {
-      name: "Gamer",
+      name: "Ninga",
       link: "/link",
     },
     {
-      name: "Esports",
-      link: "/link",
-    },
-    {
-      name: "Mobile",
-      link: "/link",
-    },
-    {
-      name: "Bat",
-      link: "/link",
-    },
-    {
-      name: "Balls",
-      link: "/link",
-    },
-    {
-      name: "Gamer",
-      link: "/link",
-    },
-    {
-      name: "Esports",
-      link: "/link",
-    },
-    {
-      name: "Mobile",
-      link: "/link",
-    },
-    {
-      name: "Bat",
-      link: "/link",
-    },
-    {
-      name: "Balls",
-      link: "/link",
-    },
-    {
-      name: "Gamer",
-      link: "/link",
-    },
-    {
-      name: "Esports",
-      link: "/link",
-    },
-    {
-      name: "Mobile",
-      link: "/link",
-    },
-    {
-      name: "Bat",
-      link: "/link",
-    },
-    {
-      name: "Balls",
-      link: "/link",
-    },
-    {
-      name: "Gamer",
-      link: "/link",
-    },
-    {
-      name: "Esports",
-      link: "/link",
-    },
-    {
-      name: "Mobile",
-      link: "/link",
-    },
-    {
-      name: "Bat",
-      link: "/link",
-    },
-    {
-      name: "Balls",
-      link: "/link",
-    },
-    {
-      name: "Gamer",
-      link: "/link",
-    },
-    {
-      name: "Esports",
-      link: "/link",
-    },
-    {
-      name: "Mobile",
-      link: "/link",
-    },
-    {
-      name: "Bat",
-      link: "/link",
-    },
-    {
-      name: "Balls",
-      link: "/link",
-    },
-    {
-      name: "Gamer",
-      link: "/link",
-    },
-    {
-      name: "Esports",
-      link: "/link",
-    },
-    {
-      name: "Mobile",
-      link: "/link",
-    },
-    {
-      name: "Bat",
-      link: "/link",
-    },
-    {
-      name: "Balls",
+      name: "Taewondo gi",
       link: "/link",
     },
   ];
@@ -210,7 +104,7 @@ export default function Navbar() {
             top: -110vh !important;
             right: 0 !important;
             // width: 100%;
-            transition: all 200ms ease;
+            transition: all 600ms ease;
           }
           .open {
             position: fixed;
@@ -243,13 +137,13 @@ export default function Navbar() {
             top: 0;
             z-index: -12;
             left: 0;
-            background: #1a0000;
+            // background: #1a0000;
             width: 100%;
             height: 120%;
-            box-shadow: 0px 0px 40px black;
+            // -webkit-box-shadow: 0px 0px 40px black;
 
-            border-bottom-right-radius: 60%;
-            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
           }
           .res-1100-2 {
             padding: 15px 0px;
@@ -263,7 +157,7 @@ export default function Navbar() {
             letter-spacing: 1px;
             font-weight: 600;
             color: white;
-            font-size: 0.71em;
+            font-size: 0.61em;
           }
           .img-logo {
             width: 150px;
@@ -287,10 +181,10 @@ export default function Navbar() {
             display: none;
             position: absolute;
             background-color: #070707;
-            min-width: 160px;
+            min-width: 360px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
-            height: 70vh;
+            height: 50vh;
             overflow-y: scroll;
           }
           .dropdown-content::-webkit-scrollbar-thumb {
@@ -303,6 +197,7 @@ export default function Navbar() {
           }
           .menubtn {
             cursor: pointer;
+            font-size: 0.81em;
           }
 
           /* Links inside the dropdown */
@@ -319,7 +214,14 @@ export default function Navbar() {
           .dropdown-content a:hover {
             background-color: #111111;
           }
-
+          // .dropdown-content::before {
+          //   content: "";
+          //   width: 100vw;
+          //   height: 100vh;
+          //   position: absolute;
+          //   top: 0;
+          //   left: 0;
+          // }
           /* Show the dropdown menu on hover */
           .dropdown:hover .dropdown-content {
             display: block;
@@ -361,7 +263,7 @@ export default function Navbar() {
                 <span class="material-symbols-outlined">arrow_drop_down</span>
               </button>
               <div class="dropdown-content">
-                {productList.map((product) => (
+                {productListForMartialArts.map((product) => (
                   <a href="#">{product.name}</a>
                 ))}
               </div>
@@ -380,7 +282,7 @@ export default function Navbar() {
                 setNav(!isNav);
               }}
             >
-              menu_open
+              menu
             </span>
           </div>
         </div>
@@ -388,7 +290,12 @@ export default function Navbar() {
       {/*  */}
       {/* <Navbar /> */}
       <div className={`menu-main ${isNav ? "open" : "close"}`}>
-        <Menu productList={productList} isNav={isNav} setNav={setNav} />
+        <Menu
+          productList={productList}
+          productListForMartialArts={productListForMartialArts}
+          isNav={isNav}
+          setNav={setNav}
+        />
       </div>
     </div>
   );

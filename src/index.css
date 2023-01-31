@@ -12,10 +12,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+:root {
+  --mainRed: #8f0000;
+}
 * {
   padding: 0;
   margin: 0;
   font-family: "poppins";
+}
+.border-bottom {
+  border-bottom: 5px solid #8f0000;
 }
 .btn {
   background: none;
@@ -24,7 +30,7 @@ code {
   cursor: pointer;
 }
 .res-1100 {
-  width: min(100% - 20px, 1200px);
+  width: min(100% - 20px, 1700px);
   margin-inline: auto;
 }
 .line-through {
@@ -45,4 +51,249 @@ code {
   /* justify-content: center; */
   /* color:#bd0000bb; */
   align-items: center;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* CATA Page */
+.main-cata-page {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  /* height: 100vh; */
+  align-items: center;
+  padding: 2em 0;
+  padding-top: 6.4em;
+  overflow: hidden;
+  /* background-image: url("../public/backcata.png"); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* position: relative; */
+  /* filter: brightness(0.1); */
+  /* filter: grayscale(100%); */
+  /* background-blend-mode: saturation; */
+}
+.heading-top-deal-in {
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 2.4em;
+  /* font-variant: small-caps; */
+  text-transform: uppercase;
+}
+.back-img-1 {
+  position: absolute;
+  top: 0;
+  /* height: ; */
+  width: 100%;
+  filter: brightness(0.13);
+}
+.sprots-wear {
+  width: 38%;
+  height: fit-content;
+  /* background-color: aliceblue; */
+  position: relative;
+  text-align: center;
+}
+.sprots-wear::before {
+  content: "SPORTS";
+  position: absolute;
+  top: -1em;
+  z-index: +1;
+  transform: translateX(-50%);
+
+  left: 50%;
+  color: white;
+  font-size: 4.3em;
+  font-weight: 800;
+}
+.sprots-wear::after {
+  content: "wear.";
+  position: absolute;
+  bottom: 1em;
+  right: 0;
+  z-index: +1;
+  color: white;
+  font-size: 3.3em;
+  font-weight: 800;
+}
+.sprots-wear-1 {
+  width: 38%;
+  height: fit-content;
+  /* background-color: aliceblue; */
+  position: relative;
+  text-align: center;
+}
+.sprots-wear-1::before {
+  content: "MARTIAL";
+  position: absolute;
+  top: -1em;
+  transform: translateX(-50%);
+  z-index: +1;
+  left: 50%;
+  color: white;
+  font-size: 4.3em;
+  font-weight: 800;
+}
+.sprots-wear-1::after {
+  content: "arts.";
+  position: absolute;
+  bottom: 1em;
+  right: 0;
+  z-index: +1;
+  color: white;
+  font-size: 3.3em;
+  font-weight: 800;
+}
+.image-cata {
+  width: 100%;
+  position: relative;
+  border-radius: 50%;
+  filter: saturate(0);
+  /* z-index: ; */
+  /* filter: grayscale(0%); */
+  transition: all 500ms ease;
+}
+.image-cata:hover {
+  filter: saturate(1);
+  /* border-radius: 0; */
+  transform: scale(1.041);
+}
+.btn-see-more {
+  width: 170px;
+  height: 45px;
+  background-color: var(--mainRed);
+  color: white;
+  font-size: 0.91em;
+  font-weight: 200;
+  border-radius: 100px;
+  margin-top: 10px;
+  z-index: +11;
+  /* margin-inline: auto; */
+}
+.main-cata-page {
+  display: flex;
+}
+/* .main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+} */
+/* END Of CATA page */
+
+/* SportCata CSS styling */
+.heading-cata-name {
+  color: none;
+  font-size: 3em;
+  line-height: 1em;
+  margin: 1em 10px;
+  float: right;
+  text-align: right;
+  -webkit-text-stroke: 1px var(--mainRed);
+}
+.main-sports-cata {
+  width: 100%;
+  overflow-x: hidden;
+}
+.main-items-cont {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+}
+/* END Of sportsCATA page */
+
+/* Item styling */
+.main-item-card {
+  /* flex-basis: 350px; */
+  width: 340px;
+  margin: 10px;
+  position: relative;
+}
+.item-card-img {
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+.img-cmt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  filter: brightness(0);
+  z-index: +2;
+  /* border-radius: 5px; */
+  height: 100%;
+  /* background-color: rgba(255, 42, 42, 0.726); */
+  /* width: 100%; */
+}
+.item-card-name {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin-bottom: 5px;
+}
+/* End Item styling */
+
+/* Whole responsivness of whole website project */
+/* Medai Queary */
+@media only screen and (max-width: 1400px) {
+  .sprots-wear::after {
+    /* width: 43%; */
+    font-size: 2.63em;
+  }
+  .sprots-wear-1::after {
+    /* width: 43%; */
+    font-size: 2.63em;
+  }
+  .sprots-wear-1::before {
+    font-size: 3.4em;
+  }
+  .sprots-wear::before {
+    font-size: 3.4em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sprots-wear {
+    width: 43%;
+  }
+  .sprots-wear-1 {
+    width: 43%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .main-cata-page {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sprots-wear {
+    width: 90%;
+    margin-bottom: 6em;
+  }
+  .sprots-wear-1 {
+    width: 90%;
+  }
+  .back-img-1 {
+    width: auto;
+    height: 100%;
+  }
+  .main-item-card {
+    /* flex-basis: 350px; */
+    width: 90%;
+    /* margin: 10px; */
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main-item-card {
+    /* flex-basis: 350px; */
+    width: 90%;
+    /* margin: 10px; */
+  }
 }
