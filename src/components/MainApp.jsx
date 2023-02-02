@@ -51,7 +51,7 @@ export default function MainApp() {
       </style>
       {/* <div className="blur-ball-1"></div> */}
 
-      <Navbar />
+      {/* <Navbar /> */}
       <Home />
       <Catagories />
       <Sportscata />

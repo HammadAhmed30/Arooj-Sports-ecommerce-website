@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Catagories() {
   return (
     <div className="main">
@@ -11,11 +11,15 @@ export default function Catagories() {
           <img className="back-img-1" src="backcata.png" alt="" />
           <div className="sprots-wear">
             <img className="image-cata" src="sports.png" alt="" />
-            <button className="btn btn-see-more">See More</button>
+            <Link to="/2">
+              <button className="btn btn-see-more">See More</button>
+            </Link>
           </div>
           <div className="sprots-wear-1">
             <img className="image-cata" src="martial arts.png" alt="" />
-            <button className="btn btn-see-more">See More</button>
+            <Link to="/1">
+              <button className="btn btn-see-more">See More</button>
+            </Link>
           </div>
         </div>
       </div>

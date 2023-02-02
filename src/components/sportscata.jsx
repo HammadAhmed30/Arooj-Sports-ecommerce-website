@@ -17,7 +17,7 @@ export default function Sportscata() {
     },
     {
       name: "Basketball",
-      img: "Sports Wear/Basketball/BB1.jpg",
+      img: "Sports Wear/Basketball/Basketball20Uniforms_img_381.jpg",
     },
     {
       name: "GoalKeeper",

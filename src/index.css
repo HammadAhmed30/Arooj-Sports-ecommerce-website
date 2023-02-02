@@ -203,6 +203,7 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  /* width: 100%; */
   /* gap: 10px; */
 }
 /* END Of sportsCATA page */
@@ -211,37 +212,68 @@ a {
 .main-item-card {
   /* flex-basis: 350px; */
   width: 340px;
-  margin: 10px;
+  margin: 0 10px;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 .item-card-img {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0px;
+  /* width; */
+  margin: 0;
+  border-radius: 25px;
+
   position: relative;
+  transition: all 400ms ease;
+  padding: 0;
 }
-.img-cmt::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  filter: brightness(0);
-  z-index: +2;
-  /* border-radius: 5px; */
-  height: 100%;
-  /* background-color: rgba(255, 42, 42, 0.726); */
-  /* width: 100%; */
-}
+/* .main-item-card:hover .item-card-name { */
+/* border-radius: 10px; */
+/* color: black; */
+/* -webkit-text-stroke: 1px rgba(255, 255, 255, 0.274); */
+
+/* transform: translateY(calc(-1.5em - 10px)); */
+/* height: 0px; */
+/* display: n; */
+/* } */
+/* . */
 .item-card-name {
-  background-color: gray;
-  color: white;
+  /* background-color: gray; */
+  color: black;
+  background-color: #545454;
+  margin-top: 8px;
+  /* text-align: center; */
+  border-radius: 25px;
+  transition: all 300ms ease;
+  z-index: +10;
+  /* padding: 20px 0; */
+  /* background-color: #8f0000; */
+  /* padding: 10px 0; */
+  /* padding-top: 2px; */
+  font-size: 120%;
+  font-weight: 400;
+  padding: 5px 0;
   text-align: center;
-  border-radius: 5px;
-  padding: 10px 0;
-  margin-bottom: 5px;
+  color: white;
+  margin-inline: center;
+  width: 90%;
+  /* margin: 10px 0; */
+  /* margin */
+  margin-bottom: 10px;
 }
 /* End Item styling */
-
+/* Some link page styling */
+.main-link-fitter {
+  /* display: grid; */
+  /* width: fit-content; */
+  /* display: inline-block; */
+  display: block;
+}
+/* End if link styling */
 /* Whole responsivness of whole website project */
 /* Medai Queary */
 @media only screen and (max-width: 1400px) {
@@ -268,10 +300,24 @@ a {
     width: 43%;
   }
 }
+@media only screen and (max-width: 750px) {
+  .main-item-card {
+    /* flex-basis: 350px; */
+    width: 43%;
+    /* margin: 10px; */
+  }
+}
 @media only screen and (max-width: 650px) {
+  .main-items-cont {
+    justify-content: space-between;
+  }
   .main-cata-page {
     flex-direction: column;
     align-items: center;
+  }
+  .item-card-name {
+    font-size: 90%;
+    width: 100%;
   }
   .sprots-wear {
     width: 90%;
@@ -282,18 +328,23 @@ a {
   }
   .back-img-1 {
     width: auto;
-    height: 100%;
+    height: 90%;
   }
   .main-item-card {
     /* flex-basis: 350px; */
-    width: 90%;
+    width: 48%;
+    /* margin: 0 3px; */
+    margin: 1px;
     /* margin: 10px; */
   }
 }
 @media only screen and (max-width: 500px) {
   .main-item-card {
     /* flex-basis: 350px; */
-    width: 90%;
+    width: 48%;
     /* margin: 10px; */
+  }
+  .item-card-name {
+    font-size: 82%;
   }
 }

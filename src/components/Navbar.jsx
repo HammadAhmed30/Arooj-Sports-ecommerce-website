@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Menu from "./Menu";
-
+// import logo from "../../public/logo.png";
 export default function Navbar() {
   let productList = [
     {
@@ -241,9 +242,11 @@ export default function Navbar() {
             zIndex: "11",
           }}
         >
-          <div className="logo">
-            <img className="img-logo" src="logo.png" alt="" />
-          </div>
+          <Link to="/">
+            <div className="logo">
+              <img className="img-logo" src="/logo.png" alt="" />
+            </div>
+          </Link>
           <div className="linker">
             {/* <button className="btn btn-navbar-linker">PRODUCTS</button> */}
             <div class="dropdown">
