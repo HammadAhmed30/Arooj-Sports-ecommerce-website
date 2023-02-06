@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 export default function Catagories() {
   return (
     <div className="main">
-      <h1 className="heading-top-deal-in">
+      {/* <h1 className="heading-top-deal-in">
         We <span className="border-bottom">deal</span> in
-      </h1>
+      </h1> */}
       <div className=" res-1100">
         <div className="main-cata-page">
           <img className="back-img-1" src="backcata.png" alt="" />

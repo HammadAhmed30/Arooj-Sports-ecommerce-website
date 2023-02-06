@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { mainRouting } from "../Routes in JSON/MartialArtsData";
 import OuterItem from "./OuterItem";
 import SubOutterItem from "./SubOuterItem";
+import Loading from "./Loading";
 // import Navbar from "./Navbar";
 
 export default function InnerItem(props) {
   const { para, child } = useParams();
+  const [isItLoading, setItLoading] = useState(true);
 
   // const img = require
   const dataToGet = mainRouting[para - 1][child];
-  //   console.log(dataToGet.furtherObj[1].img);
+  document.title = "Arooj Sports " + dataToGet.name;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <>
+    <div
+      onLoad={() => {
+        setItLoading(false);
+      }}
+    >
+      {isItLoading && <Loading />}
       <div className="res-1100">
         <h1 style={{ marginTop: "1.6em" }} className="heading-cata-name">
           {dataToGet.name}
@@ -21,17 +32,23 @@ export default function InnerItem(props) {
           <div className="main-items-cont">
             {dataToGet.furtherObj.map((item, index) => (
               // <Link key={index} to={`/${props.indexItemOfData}/${index}`}>
-              <SubOutterItem
+              <Link
                 key={index}
-                item={item}
-                img={item.img}
-                title={index}
-              />
+                className="main-item-card"
+                to={`/${para}/${child}/${index}`}
+              >
+                <SubOutterItem
+                  key={index}
+                  item={item}
+                  img={item.img}
+                  title={index}
+                />
+              </Link>
               // {/* // </Link> */}
             ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

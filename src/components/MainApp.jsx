@@ -4,10 +4,17 @@ import Home from "./Home";
 import MartialArtcata from "./MartialArtcata";
 import Navbar from "./Navbar";
 import Sportscata from "./sportscata";
+import { useState } from "react";
+import Loading from "./Loading";
 
 export default function MainApp() {
+  const [loading, setLoading] = useState(true);
+  document.title = "Arooj Sports | Manufacturer and Exporter";
   return (
     <div
+      onLoad={() => {
+        setLoading(false);
+      }}
       style={{
         width: "100%",
         // height: "5000px",
@@ -49,6 +56,7 @@ export default function MainApp() {
           // }
         `}
       </style>
+      {loading && <Loading />}
       {/* <div className="blur-ball-1"></div> */}
 
       {/* <Navbar /> */}

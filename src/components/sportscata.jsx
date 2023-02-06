@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import OuterItem from "./OuterItem";
 
 export default function Sportscata() {
@@ -13,17 +14,18 @@ export default function Sportscata() {
     },
     {
       name: "Baseball uniform",
-      img: "Sports Wear/Baseball uniform/BU1.jpg",
+      img: "Sports Wear/baseball uniform/Baseball20Uniforms_img_170.jpg",
     },
     {
       name: "Basketball",
-      img: "Sports Wear/Basketball/Basketball20Uniforms_img_381.jpg",
+      img: "Sports Wear/Basketball/BB1.jpg",
     },
     {
       name: "GoalKeeper",
       img: "Sports Wear/GoalKeeper/GK1.jpg",
     },
   ];
+
   return (
     <>
       <div className="res-1100">
@@ -35,7 +37,9 @@ export default function Sportscata() {
         <div className="main-sports-cata">
           <div className="main-items-cont">
             {productListToShowSportsCata.map((item, index) => (
-              <OuterItem item={item} key={index} />
+              <Link key={index} className="main-item-card" to={`/2/${index}`}>
+                <OuterItem item={item} key={index} />
+              </Link>
             ))}
           </div>
         </div>

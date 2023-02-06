@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "../index.css";
 export default function SubOutterItem(props) {
-  console.log(props.item.img);
   return (
-    <div className="main-item-card">
+    <div className="main-item-card-1">
       <img
         className="item-card-img"
         src={`/${props.item.img}`}

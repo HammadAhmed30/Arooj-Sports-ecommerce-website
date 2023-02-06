@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Menu(props) {
   const [menumartial, setmenu] = useState(false);
@@ -141,7 +142,7 @@ export default function Menu(props) {
               className="heading-menu"
             >
               Martial Arts
-              <span class="material-symbols-outlined">arrow_drop_down</span>
+              <span className="material-symbols-outlined">arrow_drop_down</span>
             </p>
             <div
               className="dorpdown-main"
@@ -150,11 +151,17 @@ export default function Menu(props) {
                 height: menumartial ? "auto" : "0px",
               }}
             >
-              {props.productListForMartialArts.map((product) => (
-                <div className="main-items-drops">
-                  <a className="a" href="#">
+              {props.productListForMartialArts.map((product, index) => (
+                <div key={index} className="main-items-drops">
+                  <Link
+                    onClick={() => {
+                      props.setNav(false);
+                    }}
+                    className="a"
+                    to={`/1/${index}`}
+                  >
                     {product.name}
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -177,17 +184,23 @@ export default function Menu(props) {
               className="heading-menu"
             >
               Sports Wear
-              <span class="material-symbols-outlined">arrow_drop_down</span>
+              <span className="material-symbols-outlined">arrow_drop_down</span>
             </p>
             <div
               className="dorpdown-main"
               style={{ height: menumartial1 ? "auto" : "0" }}
             >
-              {props.productList.map((product) => (
-                <div className="main-items-drops">
-                  <a className="a" href="#">
+              {props.productList.map((product, index) => (
+                <div key={index} className="main-items-drops">
+                  <Link
+                    onClick={() => {
+                      props.setNav(false);
+                    }}
+                    className="a"
+                    to={`/2/${index}`}
+                  >
                     {product.name}
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>

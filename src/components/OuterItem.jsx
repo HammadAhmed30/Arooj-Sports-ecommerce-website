@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import "../index.css";
+import Loading from "./Loading";
+
 export default function OuterItem(props) {
+  const [hazaLoading, setHazaLoading] = useState(true);
   return (
-    <div className="main-item-card">
+    <div
+      onLoad={() => {
+        setHazaLoading(false);
+      }}
+      className="main-item-card-1"
+    >
+      {hazaLoading && <Loading />}
       <img
         className="item-card-img"
-        src={props.item.img}
+        src={`/${props.item.img}`}
         // src="log
         alt={props.item.name}
       />

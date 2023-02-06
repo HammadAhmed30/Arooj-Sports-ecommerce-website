@@ -79,7 +79,7 @@ export default function Navbar() {
       link: "/link",
     },
     {
-      name: "Ninga",
+      name: "Ninja",
       link: "/link",
     },
     {
@@ -249,25 +249,33 @@ export default function Navbar() {
           </Link>
           <div className="linker">
             {/* <button className="btn btn-navbar-linker">PRODUCTS</button> */}
-            <div class="dropdown">
-              <button class="btn display-flex-center btn-navbar-linker">
+            <div className="dropdown">
+              <button className="btn display-flex-center btn-navbar-linker">
                 SPORTS WEAR &nbsp;
-                <span class="material-symbols-outlined">arrow_drop_down</span>
+                <span className="material-symbols-outlined">
+                  arrow_drop_down
+                </span>
               </button>
-              <div class="dropdown-content">
-                {productList.map((product) => (
-                  <a href="#">{product.name}</a>
+              <div className="dropdown-content">
+                {productList.map((product, index) => (
+                  <Link key={index} to={`/2/${index}`}>
+                    {product.name}
+                  </Link>
                 ))}
               </div>
             </div>
-            <div class="dropdown">
-              <button class="btn display-flex-center btn-navbar-linker">
+            <div className="dropdown">
+              <button className="btn display-flex-center btn-navbar-linker">
                 MARTIAL ARTS &nbsp;
-                <span class="material-symbols-outlined">arrow_drop_down</span>
+                <span className="material-symbols-outlined">
+                  arrow_drop_down
+                </span>
               </button>
-              <div class="dropdown-content">
-                {productListForMartialArts.map((product) => (
-                  <a href="#">{product.name}</a>
+              <div className="dropdown-content">
+                {productListForMartialArts.map((product, index) => (
+                  <Link key={index} to={`/1/${index}`}>
+                    {product.name}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -276,7 +284,7 @@ export default function Navbar() {
           </div>
           <div className="menubtn">
             <span
-              class="material-symbols-outlined"
+              className="material-symbols-outlined"
               style={{
                 fontSize: "2em",
                 color: "white",

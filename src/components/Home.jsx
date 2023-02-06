@@ -1,8 +1,15 @@
 import React from "react";
+import { useState } from "react";
+import Loading from "./Loading";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   return (
-    <>
+    <div
+      onLoad={() => {
+        setLoading(false);
+      }}
+    >
       <style jsx="true">{`
         .res-1100-1 {
           position: relative;
@@ -180,6 +187,7 @@ export default function Home() {
           }
         }
       `}</style>
+      {loading && <Loading />}
       <div
         className="main-cnt"
         style={{
@@ -228,6 +236,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
