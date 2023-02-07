@@ -26,6 +26,8 @@ export default function Parent(props) {
 
   return (
     <div
+      // style={{ marginTop: "1em" }}
+      className="parent-cata-image"
       onLoad={() => {
         SetLoading(false);
       }}
@@ -46,6 +48,11 @@ export default function Parent(props) {
             WEAR
           </h1>
         )}
+        <img
+          src="/red element.png"
+          alt=""
+          className="image-back-heading-cata"
+        />
         <div className="main-sports-cata">
           <div className="main-items-cont">
             {data_ARR.map((item, index) => (
@@ -56,7 +63,7 @@ export default function Parent(props) {
                   to={`/${para}/${index}`}
                 >
                   <div>
-                    <OuterItem item={item} />
+                    <OuterItem indexVal={index} item={item} />
                   </div>
                 </Link>
               </div>

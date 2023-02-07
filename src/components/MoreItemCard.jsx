@@ -2,30 +2,26 @@ import React, { useState } from "react";
 import "../index.css";
 import Loading from "./Loading";
 
-export default function SubOutterItem(props) {
+export default function MoreItemCard(props) {
   const [hazaLoading, setHazaLoading] = useState(true);
-
   return (
     <div
-      className="main-item-card-1"
       onLoad={() => {
         setHazaLoading(false);
       }}
+      className="main-item-card-1"
     >
-      <div className="tag-to-number">
+      {/* <div className="tag-to-number">
         <p className="tag-number-p">#{props.indexVal + 1}</p>
-      </div>
+      </div> */}
       {hazaLoading && <Loading />}
-
       <img
         className="item-card-img"
         src={`/${props.item.img}`}
         // src="log
         alt={props.item.name}
       />
-      <p className="item-card-name">
-        {props.item.name} #P{props.title + 1}
-      </p>
+      {/* <p className="item-card-name">{props.item.name}</p> */}
     </div>
   );
 }

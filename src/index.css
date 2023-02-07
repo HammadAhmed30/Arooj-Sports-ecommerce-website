@@ -218,6 +218,9 @@ a {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 25px;
   overflow: hidden;
 }
 .main-item-card {
@@ -225,21 +228,47 @@ a {
   /* flex-basis: 350px; */
   width: 340px;
 }
-.main-item-card-1:hover .item-card-img {
+.tag-to-number {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  /* width: 40px; */
+  z-index: 10;
+  /* height: 50px; */
+  border: 2px solid white;
+  border-top: none;
+  background-color: #373737;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.tag-number-p {
+  font-size: 120%;
+  color: var(--mainRed);
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  font-weight: 700;
+  /* margin-top: calc(100% - 20px); */
+  display: flex;
+  justify-content: center;
+  /* transform: translateY(50%); */
+  /* align-items: start; */
+}
+/* .main-item-card-1:hover .item-card-img {
   transform: translateY(10px) scale(1.05);
   border-radius: 0;
-}
+} */
 
 .item-card-img {
   width: 100%;
   border-radius: 0px;
   /* width; */
   margin: 0;
-  border-radius: 25px;
 
   position: relative;
   transition: all 400ms ease;
   padding: 0;
+  padding-top: 10px;
 }
 
 /* .main-item-card:hover .item-card-name { */
@@ -255,7 +284,8 @@ a {
 .item-card-name {
   /* background-color: gray; */
   color: black;
-  background-color: #545454;
+  /* background-color: #545454; */
+
   margin-top: 8px;
   /* text-align: center; */
   border-radius: 25px;
@@ -266,15 +296,19 @@ a {
   /* padding: 10px 0; */
   /* padding-top: 2px; */
   font-size: 120%;
-  font-weight: 400;
-  padding: 5px 0;
-  text-align: center;
-  color: white;
-  margin-inline: center;
+  font-weight: 600;
+  /* padding: 5px 0; */
   width: 90%;
+
+  text-align: left;
+  /* padding: 10px; */
+  /* margin-inline: center; */
+
   /* margin: 10px 0; */
+  /* margin: 10px; */
+  /* background-color: #8f0000; */
   /* margin */
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 /* End Item styling */
 /* Some link page styling */
@@ -319,6 +353,21 @@ a {
   margin-top: 40px;
   transition: all ease 300ms;
   border-radius: 40px;
+}
+.parent-cata-image {
+  position: relative;
+  z-index: 10;
+}
+.image-back-heading-cata {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+  max-width: 500px;
+}
+.heading-cata-name {
+  z-index: +10;
 }
 .send-inquiry-btn:hover {
   transform: translateY(-10px);
@@ -616,7 +665,7 @@ a {
   }
   .item-card-name {
     font-size: 90%;
-    width: 100%;
+    width: 95%;
   }
   .sprots-wear {
     width: 90%;

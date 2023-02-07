@@ -70,7 +70,7 @@ export default function Footer() {
             <div className="contact-info">
               <p className="contact-footer-heading">Get in touch</p>
               <div className="contact">
-                <span class="material-symbols-outlined font-light-200">
+                <span className="material-symbols-outlined font-light-200">
                   call
                 </span>
                 <p className="details-para-footer-contact">
@@ -80,7 +80,7 @@ export default function Footer() {
                 </p>
               </div>
               <div className="contact" style={{ marginTop: "10px" }}>
-                <span class="material-symbols-outlined font-light-200">
+                <span className="material-symbols-outlined font-light-200">
                   mail
                 </span>
                 <p className="details-para-footer-contact">

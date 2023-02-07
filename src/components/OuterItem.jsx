@@ -11,6 +11,9 @@ export default function OuterItem(props) {
       }}
       className="main-item-card-1"
     >
+      <div className="tag-to-number">
+        <p className="tag-number-p">#{props.indexVal + 1}</p>
+      </div>
       {hazaLoading && <Loading />}
       <img
         className="item-card-img"

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { mainRouting } from "../Routes in JSON/MartialArtsData";
 import OuterItem from "./OuterItem";
 import Loading from "./Loading";
+import MoreItemCard from "./MoreItemCard";
 
 export default function Detalis() {
   const { para, child, prod } = useParams();
@@ -70,7 +71,7 @@ export default function Detalis() {
                     className="main-item-card"
                     href={`/${para}/${child}/${index}`}
                   >
-                    <OuterItem key={index} item={item} />
+                    <MoreItemCard key={index} indexVal={index} item={item} />
                   </a>
                 )
               );

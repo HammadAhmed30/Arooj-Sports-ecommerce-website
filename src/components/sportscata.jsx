@@ -27,23 +27,28 @@ export default function Sportscata() {
   ];
 
   return (
-    <>
+    <div className="parent-cata-image">
       <div className="res-1100">
         <h1 className="heading-cata-name">
           SPORTS
           <br />
           WEAR
         </h1>
+        <img
+          src="/red element.png"
+          alt=""
+          className="image-back-heading-cata"
+        />
         <div className="main-sports-cata">
           <div className="main-items-cont">
             {productListToShowSportsCata.map((item, index) => (
               <Link key={index} className="main-item-card" to={`/2/${index}`}>
-                <OuterItem item={item} key={index} />
+                <OuterItem indexVal={index} item={item} key={index} />
               </Link>
             ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -19,6 +19,7 @@ export default function InnerItem(props) {
   }, []);
   return (
     <div
+      className="parent-cata-image"
       onLoad={() => {
         setItLoading(false);
       }}
@@ -28,6 +29,11 @@ export default function InnerItem(props) {
         <h1 style={{ marginTop: "1.6em" }} className="heading-cata-name">
           {dataToGet.name}
         </h1>
+        <img
+          src="/red element.png"
+          alt=""
+          className="image-back-heading-cata"
+        />
         <div className="main-sports-cata">
           <div className="main-items-cont">
             {dataToGet.furtherObj.map((item, index) => (
@@ -38,6 +44,7 @@ export default function InnerItem(props) {
                 to={`/${para}/${child}/${index}`}
               >
                 <SubOutterItem
+                  indexVal={index}
                   key={index}
                   item={item}
                   img={item.img}
