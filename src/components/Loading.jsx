@@ -13,7 +13,7 @@ export default function Sportscata() {
         background: "black",
         top: "0",
         left: "0",
-        zIndex: "1000",
+        zIndex: "10000",
       }}
     >
       <div className="main-loader-loading-bar"></div>

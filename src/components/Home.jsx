@@ -45,7 +45,7 @@ export default function Home() {
         .hero-img {
           position: absolute;
           bottom: 0px;
-          // z-index: +110;
+          z-index: +1;
           filter: saturate(1.5);
           height: 85%;
           right: +20px;

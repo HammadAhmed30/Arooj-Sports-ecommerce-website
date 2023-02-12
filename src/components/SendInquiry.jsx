@@ -64,6 +64,7 @@ export default function SendInquiry() {
             <div className="input-feild">
               <p className="input-name">Your name</p>
               <input
+                required
                 className="input-f-inq"
                 type="text"
                 name="user_name"
@@ -76,11 +77,17 @@ export default function SendInquiry() {
                 type="text"
                 name="p_name"
                 id=""
+                onChange={(e) => {
+                  e.target.value = `${Product_OBJ.name} #P${Number(prod) + 1}`;
+                }}
               />
               <input
                 className="input-f-inq"
                 type="text"
                 name="p_link"
+                onChange={(e) => {
+                  e.target.value = `https://aroojsports.com/${para}/${child}/${prod}`;
+                }}
                 style={{ display: "none" }}
                 id=""
                 value={`https://aroojsports.com/${para}/${child}/${prod}`}
@@ -89,6 +96,7 @@ export default function SendInquiry() {
             <div className="input-feild">
               <p className="input-name">Email</p>
               <input
+                required
                 className="input-f-inq"
                 type="text"
                 name="user_email"
@@ -98,6 +106,7 @@ export default function SendInquiry() {
             <div className="input-feild">
               <p className="input-name">Address</p>
               <input
+                required
                 className="input-f-inq"
                 type="text"
                 name="user_address"
@@ -107,6 +116,7 @@ export default function SendInquiry() {
             <div className="input-feild">
               <p className="input-name">Mobile No.</p>
               <input
+                required
                 className="input-f-inq"
                 type="text"
                 name="user_mobile_no"
@@ -125,6 +135,7 @@ export default function SendInquiry() {
             <div className="input-feild">
               <p className="input-name">Quantity</p>
               <input
+                required
                 className="input-f-inq"
                 type="number"
                 min="1"
@@ -135,6 +146,7 @@ export default function SendInquiry() {
             <div className="input-feild">
               <p className="input-name">Custom Comment</p>
               <textarea
+                required
                 name="c_comment"
                 placeholder="Please Give your Instagram link or Facebook link (if any) "
                 className="input-f-inq"

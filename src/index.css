@@ -222,6 +222,7 @@ a {
   background-color: white;
   border-radius: 25px;
   overflow: hidden;
+  transition: all 400ms ease;
 }
 .main-item-card {
   margin: 0 10px;
@@ -233,7 +234,7 @@ a {
   top: 0;
   right: 10%;
   /* width: 40px; */
-  z-index: 10;
+  z-index: 5;
   /* height: 50px; */
   border: 2px solid white;
   border-top: none;
@@ -253,6 +254,32 @@ a {
   justify-content: center;
   /* transform: translateY(50%); */
   /* align-items: start; */
+}
+.main-item-card-1::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: 0;
+  background-color: #ff00006b;
+
+  z-index: +6;
+  left: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 100%;
+  transition: all 400ms ease;
+}
+.main-item-card-1:hover {
+  transform: scale(1.02);
+}
+.main-item-card-1:hover::before {
+  border-radius: 0px;
+  width: 100%;
+}
+
+.main-item-card-1:hover .item-card-name {
+  color: white;
+  transform: scale(1.12) translateX(15px);
 }
 /* .main-item-card-1:hover .item-card-img {
   transform: translateY(10px) scale(1.05);
@@ -309,6 +336,7 @@ a {
   /* background-color: #8f0000; */
   /* margin */
   margin-bottom: 15px;
+  transition: all 400ms ease;
 }
 /* End Item styling */
 /* Some link page styling */

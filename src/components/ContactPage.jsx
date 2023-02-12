@@ -66,6 +66,7 @@ export default function ContactPage() {
             <div className="input-feild">
               <p className="input-name">Your name</p>
               <input
+                required
                 className="input-f-inq"
                 type="text"
                 name="user_name_c"
@@ -75,6 +76,7 @@ export default function ContactPage() {
             <div className="input-feild">
               <p className="input-name">Email</p>
               <input
+                required
                 className="input-f-inq"
                 type="text"
                 name="user_email_c"
@@ -95,6 +97,7 @@ export default function ContactPage() {
             <div className="input-feild">
               <p className="input-name">Message</p>
               <textarea
+                required
                 name="message_c"
                 placeholder="Message for us"
                 className="input-f-inq"
@@ -134,7 +137,7 @@ export default function ContactPage() {
 
           <div className="contact-social-media">
             <div className="a-social-m-cont">
-              <a href="">
+              <a target="_blank" href="https://www.facebook.com/Arooj.sports1/">
                 <img
                   style={{
                     width: "100%",
@@ -145,7 +148,7 @@ export default function ContactPage() {
               </a>
             </div>
             <div className="a-social-m-cont">
-              <a href="">
+              <a target="_blank" href="https://www.instagram.com/arooj.sports/">
                 <img
                   style={{
                     width: "100%",
@@ -156,7 +159,7 @@ export default function ContactPage() {
               </a>
             </div>
             <div className="a-social-m-cont">
-              <a href="mailto:info@aroojsports.net">
+              <a target="_blank" href="mailto:info@aroojsports.net">
                 <img
                   style={{
                     width: "100%",
