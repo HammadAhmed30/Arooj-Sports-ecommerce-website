@@ -13,7 +13,7 @@ export default function InnerItem(props) {
 
   // const img = require
   const dataToGet = mainRouting[para - 1][child];
-  document.title = "Arooj Sports " + dataToGet.name;
+  document.title = "Arooj Sports | " + dataToGet.name;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

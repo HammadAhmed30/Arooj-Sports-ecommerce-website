@@ -1,20 +1,43 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { mainRouting } from "../Routes in JSON/MartialArtsData";
 
 export default function Menu(props) {
   const [menumartial, setmenu] = useState(false);
   const [menumartial1, setmenu1] = useState(false);
+  const [search, setsearch] = useState("");
+  const martialsData = mainRouting[0];
+  const sportsData = mainRouting[1];
   return (
     <>
       <style jsx="true">{`
+        .heading-search {
+          overflow-x: hidden;
+
+          color: white;
+          font-size: 1.6em;
+          font-weight: 500;
+          padding-top: 5px;
+        }
+
+        .heading-search-1 {
+          position: relative;
+          font-size: 1.2em;
+          margin-top: 30px;
+
+          line-height: 0px;
+          width: 90%;
+          color: white;
+          margin-inline: auto;
+          font-weight: 700;
+        }
         .main-menu-main {
           position: absolute;
           top: 0;
           right: 0;
           height: 100vh;
           width: 50vw;
-          /* From https://css.glass */
           background: rgba(0, 0, 0, 0.48);
           border-radius: 16px;
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -33,6 +56,7 @@ export default function Menu(props) {
           // padding: 30px 0px;
           padding-top: 30px;
           overflow-y: scroll;
+          overflow-x: hidden;
           width: 100%;
         }
         .heading-menu {
@@ -99,6 +123,19 @@ export default function Menu(props) {
           justify-content: center;
           align-items: center;
         }
+        .search-div-data {
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          border-radius: 16px;
+          text-align: center;
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(7.2px);
+          width: 90%;
+          margin-inline: auto;
+          color: black;
+          border-radius: 10px;
+          transition: all 500ms ease;
+        }
         @media only screen and (max-width: 800px) {
           .main-menu-main {
             width: 100vw;
@@ -119,11 +156,81 @@ export default function Menu(props) {
         </span>
         <div className="child-main">
           <div className="search-items">
-            <input className="cinput" type="text" />
+            <input
+              value={search}
+              onChange={(e) => {
+                setsearch(e.target.value);
+              }}
+              className="cinput"
+              type="text"
+            />
             <button className="cbutton">
               <span className="material-symbols-outlined">search</span>
             </button>
           </div>
+          {search && (
+            <div className="search-div-data">
+              <h1 className="heading-search">Results for "{search}"</h1>
+              <div className="martial-search">
+                <h1 className="heading-search-1">Martial Arts</h1>
+
+                <br />
+                {martialsData.map((iteme1, index) => {
+                  return (
+                    iteme1.name
+                      .toLowerCase()
+                      .includes(search.toLowerCase()) && (
+                      <div key={index}>
+                        <Link
+                          onClick={() => {
+                            setsearch("");
+                            props.setNav(false);
+                          }}
+                          style={{
+                            color: "white",
+                            textDecoration: "underline",
+                          }}
+                          to={`/1/${index}`}
+                        >
+                          {iteme1.name}
+                        </Link>
+                      </div>
+                    )
+                  );
+                })}
+              </div>
+              <div className="martial-search">
+                <h1 className="heading-search-1">Sports Wear</h1>
+                <br />
+                <div>
+                  {sportsData.map((iteme, index) => {
+                    // console.log(item.name);
+                    return (
+                      iteme.name
+                        .toLowerCase()
+                        .includes(search.toLowerCase()) && (
+                        <div key={index}>
+                          <Link
+                            onClick={() => {
+                              setsearch("");
+                              props.setNav(false);
+                            }}
+                            style={{
+                              color: "white",
+                              textDecoration: "underline",
+                            }}
+                            to={`/2/${index}`}
+                          >
+                            {iteme.name}
+                          </Link>
+                        </div>
+                      )
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
           <span
             style={{
               margin: "1em",
@@ -211,15 +318,18 @@ export default function Menu(props) {
             }}
             className="drop-down heading-menu"
           >
-            <a
+            <Link
               className="heading-menu"
-              href=""
+              to="/about"
               style={{
                 fontSize: ".9em",
               }}
+              onClick={() => {
+                props.setNav(false);
+              }}
             >
               About
-            </a>
+            </Link>
           </div>
           <div
             style={{
@@ -227,15 +337,18 @@ export default function Menu(props) {
             }}
             className="drop-down heading-menu"
           >
-            <a
+            <Link
               className="heading-menu"
-              href=""
+              to="/contact"
               style={{
                 fontSize: ".9em",
               }}
+              onClick={() => {
+                props.setNav(false);
+              }}
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </div>

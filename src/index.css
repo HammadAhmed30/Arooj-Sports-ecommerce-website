@@ -604,6 +604,193 @@ a {
   font-size: 0.8em;
 }
 /* End of styling for footer */
+/* Start of inquiry form */
+.image-red-send-inquiry {
+  position: absolute;
+  /* top: 100%; */
+  top: 0;
+
+  left: 0;
+  width: 50vw;
+}
+.image-inq {
+  width: 90%;
+  max-width: 350px;
+  border-radius: 25px;
+  margin: 20px 0;
+}
+.heading-name-prod-inq {
+  /* padding: 20px 0; */
+  padding-bottom: 20px;
+}
+.lower-inq {
+  background: rgba(50, 50, 50, 0.31);
+  margin-top: 2em;
+  margin-bottom: 2em;
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* padding:  0; */
+
+  backdrop-filter: blur(5px);
+  width: 100%;
+  max-width: 700px;
+  margin-inline: auto;
+  -webkit-backdrop-filter: blur(5px);
+}
+.upper-inq {
+  flex-wrap: wrap;
+  margin-top: 5em;
+  background: rgba(50, 50, 50, 0.31);
+  /* border-radius: 16px; */
+  /* box-shadow: 0 4px 30px rgba(92, 92, 92, 0.56); */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  /* width: auto; */
+  width: 100%;
+  max-width: 700px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-inline: auto;
+  color: white;
+}
+/* .lower-inq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+.input-feild {
+  padding: 10px 0;
+  width: 90%;
+  margin-inline: auto;
+  color: white;
+  font-weight: 300;
+}
+.input-f-inq {
+  width: calc(100% - 20px);
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+
+  background-color: #00000000;
+  border: 1px solid white;
+  padding: 10px;
+}
+.input-name {
+  color: white;
+}
+textarea {
+  width: 100%;
+}
+.heading-name-prod-inq {
+  font-weight: 500;
+  font-size: 1.62em;
+}
+/* End of inquiry form styling */
+
+/* Start of Contact Page styling  */
+.form-contact-page {
+  width: 40%;
+  background: #00000068;
+  margin-top: 1em;
+  height: auto;
+  /* border-radius: 16px; */
+  /* box-shadow: 0 4px 30px rgba(92, 92, 92, 0.56); */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.main-contact-page {
+  display: flex;
+
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.map-contact-page {
+  margin-top: 1em;
+  z-index: +1;
+  width: 40%;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00000068;
+  padding: 10px 0;
+  /* border-radius: 16px; */
+  /* box-shadow: 0 4px 30px rgba(92, 92, 92, 0.56); */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  /* width: 500px; */
+}
+.contact-social-media {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.a-social-m-cont {
+  width: 20px;
+  margin: 0 8px;
+}
+/* End of Contact Page Styling */
+
+/* Styling of About Page */
+.about-descrition-page {
+  display: flex;
+  position: relative;
+  color: white;
+  justify-content: center;
+}
+.main-desc-about-page-1-h1 {
+  font-size: 3em;
+  font-weight: 800;
+}
+.main-desc-about-page-1-p {
+  font-size: 0.9em;
+  font-weight: 200;
+  line-height: 1.7em;
+}
+.main-desc-about-page-1 {
+  width: 100%;
+  z-index: 1;
+  max-width: 600px;
+}
+.image-desc-about-page {
+  position: absolute;
+  top: 10px;
+  height: 100%;
+  left: 0;
+  filter: saturate(0);
+}
+.shipping-details-about-page-h1 {
+  font-size: 2.4em;
+  font-weight: 800;
+  margin: 1em 0;
+}
+.shipping-details-about-page {
+  width: 100%;
+  z-index: 1;
+  max-width: 600px;
+}
+.main-shiping-div {
+  z-index: +2;
+  color: white;
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+}
+.shipping-details-about-page-div-imgs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.shipping-details-about-page-div-imgs-img {
+  width: 30%;
+  margin: 5px;
+}
+/* End of styling of About Page */
 
 /* Whole responsivness of whole website project */
 /* Medai Queary */
@@ -638,10 +825,19 @@ a {
   .details-description-part {
     width: 100%;
   }
+  .map-contact-page {
+    width: 100%;
+  }
+  .form-contact-page {
+    width: 100%;
+  }
   .main-item-card {
     /* flex-basis: 350px; */
     width: 43%;
     /* margin: 10px; */
+  }
+  .image-red-send-inquiry {
+    width: 95vw;
   }
 }
 @media only screen and (max-width: 670px) {
@@ -697,6 +893,13 @@ a {
   }
   .item-card-name {
     font-size: 82%;
+  }
+  .image-desc-about-page {
+    height: auto;
+    width: 100%;
+  }
+  .main-desc-about-page-1-p {
+    font-weight: 300;
   }
 }
 

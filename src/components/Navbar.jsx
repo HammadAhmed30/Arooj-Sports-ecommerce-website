@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
+import Loading from "./Loading";
+
 // import logo from "../../public/logo.png";
 export default function Navbar() {
+  const [loading, setloading] = useState(true);
   let productList = [
     {
       name: "American Football",
@@ -90,6 +93,9 @@ export default function Navbar() {
   const [isNav, setNav] = useState(false);
   return (
     <div
+      onLoad={() => {
+        setloading(false);
+      }}
       style={{
         position: "absolute",
         top: "0",
@@ -236,6 +242,7 @@ export default function Navbar() {
         `}
       </style>
       <div className="main-navbar">
+        {loading && <Loading />}
         <div
           className="res-1100 res-1100-2"
           style={{
@@ -267,7 +274,12 @@ export default function Navbar() {
             <div className="dropdown">
               <button className="btn display-flex-center btn-navbar-linker">
                 MARTIAL ARTS &nbsp;
-                <span className="material-symbols-outlined">
+                <span
+                  onLoad={() => {
+                    setloading(false);
+                  }}
+                  className="material-symbols-outlined"
+                >
                   arrow_drop_down
                 </span>
               </button>
@@ -280,7 +292,9 @@ export default function Navbar() {
               </div>
             </div>
             {/* <button className="btn btn-navbar-linker"></button> */}
-            <button className="btn btn-navbar-linker">CONTACT US</button>
+            <Link to="/contact">
+              <button className="btn btn-navbar-linker">CONTACT US</button>
+            </Link>
           </div>
           <div className="menubtn">
             <span

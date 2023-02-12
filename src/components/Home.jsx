@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Loading from "./Loading";
 
 export default function Home() {
@@ -229,9 +230,14 @@ export default function Home() {
               }}
             >
               <h1 className="main-heading">with us.</h1>
-              <button style={{ float: "right" }} className="btn btn-learn-more">
-                Learn more
-              </button>
+              <Link to="/about">
+                <button
+                  style={{ float: "right" }}
+                  className="btn btn-learn-more"
+                >
+                  Learn more
+                </button>
+              </Link>
             </div>
           </div>
         </div>

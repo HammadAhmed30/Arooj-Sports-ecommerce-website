@@ -46,7 +46,9 @@ export default function Detalis() {
             <p>Ship : Worldwide - DHL/FedEx/UPS/DPD</p>
             <p>Money : Western Union, MoneyGram</p>
             <p>50% advance 50% balance paid before delivery</p>
-            <button className="send-inquiry-btn">Send Inquiry</button>
+            <Link to={`/sendinquiry/${para}/${child}/${prod}`}>
+              <button className="send-inquiry-btn">Send Inquiry</button>
+            </Link>
           </div>
         </div>
         <div className="details-description-part">
