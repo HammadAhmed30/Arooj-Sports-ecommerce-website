@@ -92,11 +92,21 @@ export default function Footer() {
         </div>
         <p className="cc-para-footer">
           &copy;{" "}
-          <a href="aroojsport.com">
+          <a href="https://aroojsports.com/">
             <strong>Aroog Sports</strong>
           </a>{" "}
-          all rights are reserved. Designed by <strong>Agaaz</strong> and
-          developed by <strong>Ravalbit</strong>
+          all rights are reserved. Designed by{" "}
+          <strong>
+            <a target="_blank" href="https://www.instagram.com/agaaz.01/">
+              Agaaz
+            </a>
+          </strong>{" "}
+          and developed by{" "}
+          <strong>
+            <a target="_blank" href="https://www.instagram.com/ravalbit/">
+              Ravalbit
+            </a>
+          </strong>
         </p>
       </div>
     </div>
