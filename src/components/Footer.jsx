@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { mainRouting } from "../Routes in JSON/MartialArtsData";
+import BtnsDiv from "./BtnsDiv";
 
 export default function Footer() {
   return (
@@ -84,8 +85,11 @@ export default function Footer() {
                   mail
                 </span>
                 <p className="details-para-footer-contact">
-                  info@aroojsports.net
+                  info@aroojsports.com
                 </p>
+              </div>
+              <div>
+                <BtnsDiv />
               </div>
             </div>
           </div>

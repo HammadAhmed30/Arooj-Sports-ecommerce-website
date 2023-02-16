@@ -159,7 +159,7 @@ export default function ContactPage() {
               </a>
             </div>
             <div className="a-social-m-cont">
-              <a target="_blank" href="mailto:info@aroojsports.net">
+              <a target="_blank" href="mailto:info@aroojsports.com">
                 <img
                   style={{
                     width: "100%",

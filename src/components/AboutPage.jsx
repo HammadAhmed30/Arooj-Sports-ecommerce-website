@@ -18,6 +18,8 @@ export default function AboutPage() {
     >
       {loading && <Loading />}
       <img
+        key={22332222222}
+        data-aos="fade-right"
         onLoad={() => {
           setloading(false);
         }}
@@ -26,7 +28,7 @@ export default function AboutPage() {
         alt=""
       />
 
-      <div className="about-descrition-page">
+      <div className="about-descrition-page" key={223322} data-aos="fade-up">
         <div className="main-desc-about-page-1">
           <h1 className="main-desc-about-page-1-h1">About</h1>
           <p className="main-desc-about-page-1-p">
@@ -53,7 +55,7 @@ export default function AboutPage() {
           </Link>
         </div>
       </div>
-      <div className="main-shiping-div">
+      <div className="main-shiping-div" key={22332222} data-aos="fade-up">
         <div className="shipping-details-about-page">
           <h1 className="shipping-details-about-page-h1">Our Shipping</h1>
           <div className="shipping-details-about-page-div-imgs">
@@ -90,7 +92,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="main-shiping-div">
+      <div className="main-shiping-div" key={223333322} data-aos="fade-up">
         <div className="shipping-details-about-page">
           <h1 className="shipping-details-about-page-h1">Our Certification</h1>
           <div className="shipping-details-about-page-div-imgs">

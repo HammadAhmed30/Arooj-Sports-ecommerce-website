@@ -2,16 +2,22 @@ import React from "react";
 import Catagories from "./Catagories";
 import Home from "./Home";
 import MartialArtcata from "./MartialArtcata";
-import Navbar from "./Navbar";
 import Sportscata from "./sportscata";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Loading from "./Loading";
+import AOS from "aos";
+import { motion } from "framer-motion";
 
 export default function MainApp() {
   const [loading, setLoading] = useState(true);
+
   document.title = "Arooj Sports | Manufacturer and Exporter";
+
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       onLoad={() => {
         setLoading(false);
       }}
@@ -64,6 +70,6 @@ export default function MainApp() {
       <Catagories />
       <Sportscata />
       <MartialArtcata />
-    </div>
+    </motion.div>
   );
 }

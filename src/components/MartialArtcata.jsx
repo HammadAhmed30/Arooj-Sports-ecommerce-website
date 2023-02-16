@@ -28,12 +28,18 @@ export default function MartialArtcata() {
   return (
     <div className="parent-cata-image">
       <div className="res-1100">
-        <h1 className="heading-cata-name">
+        <h1
+          key="mainmartial"
+          data-aos="fade-right"
+          className="heading-cata-name"
+        >
           MARTIAL
           <br />
           ARTS
         </h1>
         <img
+          key="mainmartil"
+          data-aos="fade-left"
           src="/red element.png"
           alt=""
           className="image-back-heading-cata"
@@ -42,7 +48,7 @@ export default function MartialArtcata() {
           <div className="main-items-cont">
             {productListToShowSportsCata.map((item, index) => (
               <Link key={index} className="main-item-card" to={`/1/${index}`}>
-                <OuterItem item={item} indexVal={index} key={index} />
+                <OuterItem item={item} indexVal={index} />
               </Link>
             ))}
           </div>

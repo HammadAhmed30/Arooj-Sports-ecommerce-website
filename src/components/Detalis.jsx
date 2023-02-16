@@ -5,6 +5,7 @@ import { mainRouting } from "../Routes in JSON/MartialArtsData";
 import OuterItem from "./OuterItem";
 import Loading from "./Loading";
 import MoreItemCard from "./MoreItemCard";
+import BtnsDiv from "./BtnsDiv";
 
 export default function Detalis() {
   const { para, child, prod } = useParams();
@@ -46,9 +47,28 @@ export default function Detalis() {
             <p>Ship : Worldwide - DHL/FedEx/UPS/DPD</p>
             <p>Money : Western Union, MoneyGram</p>
             <p>50% advance 50% balance paid before delivery</p>
-            <Link to={`/sendinquiry/${para}/${child}/${prod}`}>
-              <button className="send-inquiry-btn">Send Inquiry</button>
-            </Link>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                alignContent: "center",
+                marginTop: "2em",
+                justifyContent: "space-between",
+              }}
+            >
+              <Link to={`/sendinquiry/${para}/${child}/${prod}`}>
+                <button
+                  style={{
+                    margin: "0px",
+                  }}
+                  className="send-inquiry-btn"
+                >
+                  Send Inquiry
+                </button>
+              </Link>
+              &ensp;
+              <BtnsDiv />
+            </div>
           </div>
         </div>
         <div className="details-description-part">

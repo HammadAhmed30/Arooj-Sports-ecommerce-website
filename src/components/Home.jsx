@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+
   return (
     <div
       onLoad={() => {
@@ -216,15 +217,35 @@ export default function Home() {
             <img src="element 3.png" alt="" />
           </div> */}
           {/* <div className="blori-bante-2"></div> */}
-          <img className="hero-img blur-img" src="hero men.png" alt="" />
-          <img className="hero-img" src="hero men.png" alt="" />
+          <img
+            data-aos-duration="2000"
+            data-aos="fade-left"
+            className="hero-img blur-img"
+            src="hero men.png"
+            alt=""
+          />
+          <img
+            data-aos-duration="2000"
+            data-aos="fade-left"
+            className="hero-img"
+            src="hero men.png"
+            alt=""
+          />
           <div
             style={{
               zIndex: "+10",
             }}
           >
-            <h1 className="main-heading">Build your brand</h1>
+            <h1
+              data-aos-duration="2000"
+              data-aos="fade-right"
+              className="main-heading"
+            >
+              Build your brand
+            </h1>
             <div
+              data-aos-duration="2000"
+              data-aos="fade-left"
               style={{
                 width: "fit-content",
               }}

@@ -29,12 +29,19 @@ export default function Sportscata() {
   return (
     <div className="parent-cata-image">
       <div className="res-1100">
-        <h1 className="heading-cata-name">
+        <h1
+          className="heading-cata-name"
+          key="mainsprsots"
+          data-aos="fade-right"
+        >
           SPORTS
           <br />
           WEAR
         </h1>
         <img
+          key="mainsprots"
+          data-aos="fade-left"
+          data-aos-duration="1000"
           src="/red element.png"
           alt=""
           className="image-back-heading-cata"
